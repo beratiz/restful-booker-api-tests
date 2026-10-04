@@ -1,6 +1,7 @@
 package api.clients;
 
 import api.dto.BookingRequestDto;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -31,6 +32,7 @@ public class BookingApiClient {
     public Response createBooking(BookingRequestDto request) {
         return given()
                 .spec(requestSpec)
+                .contentType(ContentType.JSON)
                 .body(request)
             .when()
                 .post("/booking");

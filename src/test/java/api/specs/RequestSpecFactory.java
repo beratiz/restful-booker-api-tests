@@ -18,11 +18,8 @@ public final class RequestSpecFactory {
                 "baseUrl",
                 DEFAULT_BASE_URL
         );
-
         return new RequestSpecBuilder()
                 .setBaseUri(baseUrl)
-                .setContentType(ContentType.JSON)
-                .setAccept(ContentType.JSON)
                 .build();
     }
 }

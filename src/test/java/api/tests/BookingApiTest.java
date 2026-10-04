@@ -28,7 +28,7 @@ public class BookingApiTest extends BaseApiTest {
 
         List<Integer> bookingIds =
                 response.jsonPath().getList("bookingid", Integer.class);
-
+      //  System.out.println(bookingIds.toString());
         Assert.assertFalse(bookingIds.isEmpty());
     }
 
